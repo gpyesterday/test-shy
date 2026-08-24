@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Visual Studio Code에서 AI 에이전트를 설정하고 활용하는 실전 가이드" />
+    <title>Agent Atlas — VS Code AI Agent Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Agent Atlas 홈"><span class="brand-mark">↗</span><span>agent<span>atlas</span></span></a>
+      <nav aria-label="주요 메뉴"><a href="#setup">시작하기</a><a href="#workflow">워크플로우</a><a href="#guide">실전 가이드</a></nav>
+      <a class="header-cta" href="#setup">환경 만들기 <span>→</span></a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="eyebrow"><span class="pulse"></span> VS CODE × AI AGENTS</div>
+        <h1>코드 에디터가<br /><em>팀메이트</em>가 되는 순간.</h1>
+        <p class="hero-copy">Visual Studio Code 안에서 AI 에이전트를 설정하고, 지시하고,<br class="desktop-break" /> 더 나은 소프트웨어를 함께 만드는 방법.</p>
+        <div class="hero-actions"><a class="button primary" href="#setup">5분 안에 시작하기 <span>↓</span></a><a class="button secondary" href="#guide">가이드 둘러보기 <span>↗</span></a></div>
+        <div class="hero-meta"><span><b>01</b> 설치부터 첫 실행까지</span><span><b>02</b> 실무에 바로 쓰는 프롬프트</span></div>
+        <div class="code-stage" aria-label="AI agent 예시 화면">
+          <div class="editor-top"><div class="traffic"><i></i><i></i><i></i></div><span>workspace / agent-session.md</span><span class="live"><i></i> agent active</span></div>
+          <div class="editor-body"><aside><span>⌘</span><span>⌕</span><span>⑂</span><span>◫</span></aside><div class="code-content"><p class="code-muted"># 새 기능을 만들어 볼까요?</p><p><span class="code-pink">@workspace</span> <span class="code-white">결제 모듈의 테스트 커버리지를 분석하고,</span></p><p><span class="code-white">누락된 엣지 케이스를 테스트로 추가해줘.</span></p><div class="agent-response"><div class="agent-avatar">A</div><div><span class="response-label">AGENT</span><p>결제 모듈을 분석했습니다. 3개의 누락된 케이스를 찾아 테스트를 준비했어요.</p><div class="files"><span>＋ payment.spec.ts</span><span>✓ 3 tests</span></div></div></div></div><div class="editor-line"></div></div>
+        </div>
+      </section>
+
+      <section class="intro" id="setup">
+        <div class="section-label">01 — GET STARTED</div>
+        <div class="intro-grid"><h2>에이전트는<br />당신의 <em>의도</em>를<br />이해합니다.</h2><div class="intro-copy"><p>AI 에이전트는 단순한 자동완성을 넘어, 코드베이스를 읽고 도구를 사용하며 작업을 끝까지 수행하는 개발 파트너입니다.</p><p>VS Code의 익숙한 화면 안에서, 대화 한 번으로 반복 작업을 맡기고 더 중요한 문제에 집중하세요.</p><a href="#guide" class="text-link">에이전트 모드 알아보기 <span>→</span></a></div></div>
+        <div class="install-card"><div class="install-number">01</div><div class="install-main"><span class="mini-label">FIRST, INSTALL</span><h3>GitHub Copilot을 설치하세요.</h3><p>VS Code 확장 프로그램 탭에서 <b>GitHub Copilot</b>을 검색하고 설치합니다.</p></div><div class="install-icon"><span>⌘</span></div><div class="install-action"><a class="button dark" href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot" target="_blank" rel="noreferrer">Marketplace 열기 ↗</a><small>GitHub 계정 로그인이 필요해요</small></div></div>
+      </section>
+
+      <section class="steps" id="workflow">
+        <div class="section-head"><div><div class="section-label">02 — YOUR FIRST AGENT</div><h2>첫 번째 작업,<br /><em>이렇게</em> 맡겨보세요.</h2></div><p>어려운 설정은 필요 없습니다.<br />작업을 설명하고, 에이전트에게<br />필요한 권한을 주세요.</p></div>
+        <div class="step-list">
+          <article class="step"><div class="step-count">01</div><div class="step-text"><h3>채팅을 열고 모드를 선택하세요</h3><p><kbd>⌃</kbd> <kbd>⌘</kbd> <kbd>I</kbd> 로 채팅을 연 뒤, 상단 드롭다운에서 <b>Agent</b> 모드를 선택합니다.</p></div><div class="step-visual mode-visual"><div class="fake-select">Agent <span>⌄</span></div><small>Ask　Edit　<span>Agent</span></small></div></article>
+          <article class="step"><div class="step-count">02</div><div class="step-text"><h3>맥락과 목표를 함께 전달하세요</h3><p>무엇을, 왜, 어떤 기준으로 할지 알려줄수록 결과가 좋아집니다. 관련 파일은 <b>#</b>으로 추가하세요.</p></div><div class="step-visual prompt-visual"><span class="hash">#</span><span>auth.ts</span><i></i><small>로그인 실패 시 에러 메시지를<br />사용자 친화적으로 개선해줘</small></div></article>
+          <article class="step"><div class="step-count">03</div><div class="step-text"><h3>제안을 검토하고 실행하세요</h3><p>에이전트가 제안하는 변경 사항과 터미널 명령을 확인한 후, 허용 여부를 결정합니다.</p></div><div class="step-visual approve-visual"><div><span class="bot">✦</span><span>Apply changes?</span></div><button>Allow</button><button class="outline">Review</button></div></article>
+        </div>
+      </section>
+
+      <section class="guide" id="guide">
+        <div class="guide-header"><div class="section-label">03 — FIELD GUIDE</div><h2>일이 <em>흐르는</em><br />프롬프트들.</h2><p>좋은 요청은 좋은 결과를 만듭니다. 목적에 맞는 시작점을 골라 그대로 사용해 보세요.</p></div>
+        <div class="guide-grid">
+          <article class="prompt-card featured"><div class="card-top"><span class="tag">REFACTOR</span><span class="card-no">01</span></div><h3>리팩터링<br />파트너</h3><p>복잡한 코드를 안전하게 정리하고, 개선 이유를 함께 확인합니다.</p><div class="prompt-box"><span>✦</span><p>이 파일의 책임을 분석하고, 가독성을 해치지 않는 선에서 중복을 제거해줘. 변경 전후의 차이도 설명해줘.</p></div><button class="copy-button" data-copy="이 파일의 책임을 분석하고, 가독성을 해치지 않는 선에서 중복을 제거해줘. 변경 전후의 차이도 설명해줘.">프롬프트 복사 <span>⧉</span></button></article>
+          <article class="prompt-card"><div class="card-top"><span class="tag">TEST</span><span class="card-no">02</span></div><h3>테스트<br />작성자</h3><p>놓치기 쉬운 경계 조건까지 고려해 테스트를 보강합니다.</p><div class="prompt-box"><span>✦</span><p>이 함수의 동작을 분석해 단위 테스트를 작성해줘. 정상 흐름과 실패 케이스를 모두 포함해줘.</p></div><button class="copy-button" data-copy="이 함수의 동작을 분석해 단위 테스트를 작성해줘. 정상 흐름과 실패 케이스를 모두 포함해줘.">프롬프트 복사 <span>⧉</span></button></article>
+          <article class="prompt-card dark-card"><div class="card-top"><span class="tag">EXPLORE</span><span class="card-no">03</span></div><h3>코드베이스<br />안내자</h3><p>낯선 프로젝트도 빠르게 파악하고 다음 작업을 찾아냅니다.</p><div class="prompt-box"><span>✦</span><p>이 프로젝트의 구조와 데이터 흐름을 설명해줘. 새 기능을 추가한다면 어디부터 살펴봐야 할까?</p></div><button class="copy-button" data-copy="이 프로젝트의 구조와 데이터 흐름을 설명해줘. 새 기능을 추가한다면 어디부터 살펴봐야 할까?">프롬프트 복사 <span>⧉</span></button></article>
+        </div>
+      </section>
+
+      <section class="principles"><div class="section-label">04 — WORK SMARTER</div><div class="principles-grid"><h2>에이전트와<br /><em>잘</em> 일하는 법.</h2><div class="principle-list"><article><span>01</span><div><h3>작게 나눠서, 명확하게.</h3><p>한 번에 모든 것을 요청하기보다, 검토 가능한 단위로 작업을 나누세요.</p></div></article><article><span>02</span><div><h3>항상 결과를 확인하세요.</h3><p>에이전트는 빠른 동료이지, 최종 결정권자는 아닙니다. 변경 내용을 이해하고 승인하세요.</p></div></article><article><span>03</span><div><h3>프로젝트 규칙을 알려주세요.</h3><p>코딩 스타일과 테스트 방법을 지침 파일에 기록하면 더 일관된 도움을 받을 수 있습니다.</p></div></article></div></div></section>
+
+      <section class="closing"><div class="closing-orbit"><span></span><span></span><span></span><i>✦</i></div><div><div class="section-label">READY WHEN YOU ARE</div><h2>다음 커밋은<br /><em>혼자</em> 하지 마세요.</h2><a class="button primary" href="#setup">에이전트와 시작하기 <span>→</span></a></div></section>
+    </main>
+    <footer><a class="brand" href="#top"><span class="brand-mark">↗</span><span>agent<span>atlas</span></span></a><p>Built for curious developers. © 2026</p><a href="#top">맨 위로 ↑</a></footer>
+    <div class="toast" role="status">프롬프트를 복사했어요.</div>
+    <script src="script.js"></script>
+  </body>
+</html>
