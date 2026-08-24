@@ -9,3 +9,11 @@ python3 -m http.server 4173
 ```
 
 Then open `http://localhost:4173`.
+
+## GitHub Pages deployment
+
+The included GitHub Actions workflow deploys this static site whenever changes
+are pushed to the `work` branch. In the repository settings, set **Pages → Build
+and deployment → Source** to **GitHub Actions** once. After the workflow
+finishes, the deployed URL is shown in the `github-pages` environment and in the
+workflow summary.
